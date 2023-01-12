@@ -13,7 +13,7 @@
 
     \[string](url) 링크(Link) : string은 보여지는 부분, url은 연결할 곳을 나타냄
 
-    \![string](img_url) 이미지(Image) : 링크와 비슷하지만 이미지를 삽입
+    \!\[string](img_url) 이미지(Image) : 링크와 비슷하지만 이미지를 삽입
 
     \**Bold** \*Italic* \~~strikeout~~ 굵게, 기울임, 삭선 : 굵게, 기울임, 삭선 기능
 
