@@ -34,7 +34,7 @@
    - Working Directory(작업영역) → Add → Staging Area(변경사항) → Commit → Repository(최종 저장소)
    - 중요한 명령어
    ```bash
-   git add # working -> staging
+    git add # working -> staging
     git commit # staging -> repository
     git status # 현재 상태 확인
     git commit -m "message" # commit 및 변경사항 message 부분에 작성
