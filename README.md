@@ -15,7 +15,7 @@
 
     \!\[string](img_url) 이미지(Image) : 링크와 비슷하지만 이미지를 삽입
 
-    \**Bold** \*Italic* \~~strikeout~~ 굵게, 기울임, 삭선 : 굵게, 기울임, 삭선 기능
+    \*\*Bold** \*Italic* \~~strikeout~~ 굵게, 기울임, 삭선 : 굵게, 기울임, 삭선 기능
 
     \--- 수평선(Horizontal Line) : 가로로 긴 수평선을 작성, 대게 단락을 구분할 때 사용
 
