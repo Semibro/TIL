@@ -82,4 +82,8 @@ PlayTorch 사이트 코드를 Pytorch Core를 이용해 구동하는데 성공!
 분명 파일 경로를 맞췄음에도 불구하고 모델을 인식하지 못한다. React Native의 Android build에서 뭔가 문제가 있는 것 같은데..
 
 해결 방법을 좀 더 찾아봐야겠다.
+
+깃허브에서 해결방법을 찾던 중 react-native-realtime-object-detection이라는 라이브러리를 찾았다.
+
+적용을 시도해봤는데.. 아무래도 오류가 많이 발생한다. 다른 해결 방법이 필요해 보인다.
 ```
