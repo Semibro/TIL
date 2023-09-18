@@ -101,5 +101,9 @@ PlayTorch 사이트 코드를 Pytorch Core를 이용해 구동하는데 성공!
 ## 2023. 09. 18
 
 ```
+기존에 사용하던 Pytorch Core를 분해해보기로 결정함. YOLOv8x-seg.ptl 파일을 임베딩해서 어떤 값을 출력하는지 확인.
 
+Python에서는 masks 값을 출력했는데, JavaScript에서는 masks값이 나오지 않음. 다른 출력값으로 인해 진행이 어려운 상황.
+
+출력값을 바꿀 수 있는 방법을 찾아볼 예정.
 ```
