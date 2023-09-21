@@ -133,3 +133,15 @@ Python에서는 masks 값을 출력했는데, JavaScript에서는 masks값이 �
 
 React Native에서는 간단하게 import와 login(), getProfile() 만으로도 사용자 로그인과 정보를 얻는 과정을 할 수 있다.
 ```
+
+<br>
+
+## 2023. 09. 21
+
+```
+소셜 로그인 기능 구현 완료. 회원가입 로직 작성 완료.
+
+React Native는 아니지만 JavaScript와 Python간의 WebRTC 작동 성공.
+
+실시간 객체 탐지 기능 구현의 가능성 보임.
+```
