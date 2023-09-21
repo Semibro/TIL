@@ -125,5 +125,11 @@ Python에서는 masks 값을 출력했는데, JavaScript에서는 masks값이 �
 ## 2023. 09. 20
 
 ```
+소셜 로그인 기능 구현 시작. React Native의 경우 BackEnd에서 Oauth구현을 할 필요가 없다.
 
+"@react-native-seoul/kakao-login"로 구현이 가능하다.
+
+카카오 개발자 페이지에서 프로젝트 생성하고, 카카오 비즈 신청을 통해서 사용자의 원하는 정보를 얻을 수 있다.
+
+React Native에서는 간단하게 import와 login(), getProfile() 만으로도 사용자 로그인과 정보를 얻는 과정을 할 수 있다.
 ```
