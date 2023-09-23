@@ -145,3 +145,11 @@ React Native는 아니지만 JavaScript와 Python간의 WebRTC 작동 성공.
 
 실시간 객체 탐지 기능 구현의 가능성 보임.
 ```
+
+<br>
+
+## 2023. 09. 22
+
+```
+React Native 메모 기능 구현 중..
+```
