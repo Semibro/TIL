@@ -167,3 +167,24 @@ React Native 메모 기능 구현 중..
 
   - 메모에 사진 추가할 수 있게 변경
 ```
+
+**하위 컴포넌트에서 상위 컴포넌트로 props 하는 방법**
+
+```JavaScript
+
+// 하위 컴포넌트
+const MemoItem: React.FC<MemoItemProp> = ({onMemoWritePress }) => {
+  return (
+    ...
+  );
+}
+
+// 상위 컴포넌트
+{memoItemVisible && <MemoItem onMemoWritePress={checkMemoHandler} />}
+
+// 상위 컴포넌트 함수
+const checkMemoHandler = () => {
+    setMemoItemVisible((prev) => !prev);
+    setMemoCreateModalVisible((prev) => !prev);
+  };
+```
