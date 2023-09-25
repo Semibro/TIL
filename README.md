@@ -227,3 +227,17 @@ const checkMemoHandler = () => {
 ```
 위의 코드에서 setMemoDetailData가 비동기적으로 작동하다보니 원하는 정보가 바로 반영이 안되는 문제가 발생함.
 ```
+
+**해결방법**
+
+```Java Script
+{memoDetailData[0] && (
+  <Text style={detailStyle.calendar}>
+    {memoDetailData[0].updatedAt}
+  </Text>
+)}
+
+// 해결방법은 해당 값이 있을 때, 동작하도록 만들면 해결이 된다..
+
+// 거의 2-3시간을 사용한 것 같은데.. 다시는 까먹지말고 이런 문제가 발생했을 때, 잘 대처하자!!
+```
