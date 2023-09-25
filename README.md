@@ -233,6 +233,22 @@ const checkMemoHandler = () => {
 **해결방법**
 
 ```Java Script
+// 메모 상세 조회를 위한 AXIOS
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const res = await axios.get(BACKEND_URL + `/memos/${memoSeq}/23`);
+        setMemoDetailData([res.data]);
+        setMemoPic(res.data.file);
+      } catch (err) {
+        console.log(err);
+      }
+    };
+    fetchData();
+  }, []);
+
+///////////////////////////////////
+
 {memoDetailData[0] && (
   <Text style={detailStyle.calendar}>
     {memoDetailData[0].updatedAt}
