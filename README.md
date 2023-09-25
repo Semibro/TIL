@@ -198,3 +198,32 @@ const checkMemoHandler = () => {
 
 원본은 이미지 비율에 따라 조정.
 ```
+
+<br>
+
+## 2023. 09. 25
+
+```
+개발을 진행하던 중, 백엔드의 정보를 받아와서 바로 보여줘야하는 상황이 발생함.
+
+이를 위해 코드를 작성하던 중 문제가 발생함.
+```
+
+```JavaScript
+// 메모 상세 조회 상태관리
+  const [memoDetailData, setMemoDetailData] = useState<MemoDetailProps[]>([]);
+
+  // 메모 상세 조회를 위한 AXIOS
+  axios
+    .get(BACKEND_URL + `/memos/${memoSeq}/23`)
+    .then((response) => {
+      setMemoDetailData([response.data]);
+    })
+    .catch((error) => {
+      console.log(error);
+    });
+```
+
+```
+위의 코드에서 setMemoDetailData가 비동기적으로 작동하다보니 원하는 정보가 바로 반영이 안되는 문제가 발생함.
+```
