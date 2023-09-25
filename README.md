@@ -209,6 +209,8 @@ const checkMemoHandler = () => {
 이를 위해 코드를 작성하던 중 문제가 발생함.
 ```
 
+**문제의 코드**
+
 ```JavaScript
 // 메모 상세 조회 상태관리
   const [memoDetailData, setMemoDetailData] = useState<MemoDetailProps[]>([]);
