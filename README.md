@@ -265,5 +265,31 @@ const checkMemoHandler = () => {
 ## 2023. 09. 26
 
 ```
+React Native에서 모달을 띄웠을 때, 모달 외의 부분을 터치했을 때 모달이 종료되도록 하는 로직 구현.
 
+```
+
+```JavaScript
+// 모달
+{memoListVisible && (
+  <>
+    <Pressable style={styles.memoClose} onPress={closeMemoList} />
+    <MemoList
+      onMemoWritePress={checkMemoHandler}
+      onMemoDetailPress={setMemoDetailModal}
+    />
+  </>
+)}
+
+// 함수
+const closeMemoList = () => {
+  setMemoListVisible(false);
+};
+
+// 스타일
+memoClose: {
+    flex: 1,
+    backgroundColor: "transparent",
+    marginTop: -screenHeight,
+  },
 ```
