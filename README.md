@@ -293,3 +293,102 @@ memoClose: {
     marginTop: -screenHeight,
   },
 ```
+
+**어지러운 4중 삼항연산자**
+
+```TypeScript
+{memoDetailData[0] && (
+  <View>
+    <Text style={detailStyle.open}>
+      {memoDetailData[0].accessType === "OPEN" ? (
+        "전체공개"
+      ) : memoDetailData[0].accessType === "CLOSED" ? (
+        "비공개"
+      ) : memoDetailData[0].taggedTeamList.length > 0 ? (
+        <Pressable
+          onPress={() =>
+            changeShowAllTagged(
+              memoDetailData[0].taggedTeamList.length - 1
+            )
+          }
+        >
+          <Text>
+            {memoDetailData[0].taggedTeamList[0].nickname}
+            {memoDetailData[0].taggedTeamList.length - 1 !==
+              0 && (
+              <Text style={detailStyle.plusText}>
+                {` +${
+                  memoDetailData[0].taggedTeamList.length - 1
+                }`}
+              </Text>
+            )}
+          </Text>
+        </Pressable>
+      ) : (
+        <Pressable
+          onPress={() =>
+            changeShowAllTagged(
+              memoDetailData[0].taggedUserList.length - 1
+            )
+          }
+        >
+          <Text style={detailStyle.open}>
+            {memoDetailData[0].taggedUserList[0].nickname}
+            {memoDetailData[0].taggedUserList.length - 1 !==
+              0 && (
+              <Text style={detailStyle.plusText}>
+                {` +${
+                  memoDetailData[0].taggedUserList.length - 1
+                }`}
+              </Text>
+            )}
+          </Text>
+        </Pressable>
+      )}
+    </Text>
+    {showAllTagged && (
+      <Pressable
+        onPress={() => changeShowAllTagged(1)}
+        style={detailStyle.tagged}
+      >
+        {memoDetailData[0].taggedTeamList.length > 0 &&
+          memoDetailData[0].taggedTeamList.map(
+            (team, index) => (
+              <Text
+                key={`team-${index}`}
+                style={{
+                  color: "#FFFFFF",
+                  marginLeft: calculateDynamicWidth(8),
+                }}
+              >
+                {team.nickname}
+              </Text>
+            )
+          )}
+        {memoDetailData[0].taggedUserList.length > 0 &&
+          memoDetailData[0].taggedUserList.map(
+            (user, index) => (
+              <Text
+                key={`user-${index}`}
+                style={{
+                  color: "#FFFFFF",
+                  marginLeft: calculateDynamicWidth(8),
+                }}
+              >
+                {user.nickname}
+              </Text>
+            )
+          )}
+      </Pressable>
+    )}
+  </View>
+)}
+
+/////////////
+
+const changeShowAllTagged = (num: number) => {
+  if (num !== 0) {
+    setShowAllTagged(!showAllTagged);
+  }
+};
+```
