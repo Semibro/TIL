@@ -38,5 +38,5 @@ Heap에 대한 이해를 위해 알고리즘 문제 풀이
 
 피보나치 수열을 푸는 문제 중, 피사노 주기에 대해서 공부를 진행
 ```
-[이항 계수 알고리즘 바로가기](https://github.com/Semibro/DataStructure_Algorithm/blob/main/Algorithm/Binomial-Coefficient.md)
+[이항 계수 알고리즘 바로가기](https://github.com/Semibro/DataStructure_Algorithm/blob/main/Algorithm/Binomial-Coefficient.md) <br/>
 [피사노 주기 알고리즘 바로가기](https://github.com/Semibro/DataStructure_Algorithm/blob/main/Algorithm/Fibonacci_PisanoPeriod.md)
