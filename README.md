@@ -41,6 +41,8 @@ Heap에 대한 이해를 위해 알고리즘 문제 풀이
 [이항 계수 알고리즘 바로가기](https://github.com/Semibro/DataStructure_Algorithm/blob/main/Algorithm/Binomial-Coefficient.md) <br/>
 [피사노 주기 알고리즘 바로가기](https://github.com/Semibro/DataStructure_Algorithm/blob/main/Algorithm/Fibonacci_PisanoPeriod.md)
 
+<br/>
+
 ## 2023. 12. 11
 
 ```
@@ -52,6 +54,8 @@ Heap에 대한 이해를 위해 알고리즘 문제 풀이
 ```
 [트리의 지름 알고리즘 바로가기](https://github.com/Semibro/DataStructure_Algorithm/blob/main/Algorithm/Tree-Diameter.md)
 
+<br/>
+
 ## 2023. 12. 12
 
 ```
@@ -60,7 +64,12 @@ Heap에 대한 이해를 위해 알고리즘 문제 풀이
 *트리의 지름 문제 1solved*
 ```
 
+<br/>
+
 ## 2023. 12. 13
 ```
 기업 입사 지원서 작성으로 인한 생략
 ```
+
+<br/>
+
