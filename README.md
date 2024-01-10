@@ -196,6 +196,10 @@ SELECT 필드명
 FROM 테이블명
 WHERE 필드명 = (SELECT MAX(필드명)
               FROM 테이블명)
+
+# DISTINCT
+SELECT COUNT(DISTINCT(필드명))
+FROM 테이블명
 ```
 
 ```SQL
@@ -212,4 +216,10 @@ SELECT *
 FROM FOOD_PRODUCT
 WHERE PRICE = (SELECT MAX(PRICE)
               FROM FOOD_PRODUCT)
+```
+```SQL
+-- [프로그래머스] 중복 제거하기
+-- 코드를 입력하세요
+SELECT COUNT(DISTINCT(NAME))
+FROM ANIMAL_INS
 ```
