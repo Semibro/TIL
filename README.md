@@ -82,14 +82,14 @@ ORDER BY 정렬조건
 ```
 
 ```SQL
--- 프로그래머스 평균 일일 대여 요금 구하기
+-- [프로그래머스] 평균 일일 대여 요금 구하기
 -- 코드를 입력하세요
 SELECT ROUND(AVG(DAILY_FEE), 0) AS AVERAGE_FEE
 FROM CAR_RENTAL_COMPANY_CAR
 WHERE CAR_TYPE = 'SUV';
 ```
 ```SQL
--- 프로그래머스 조건에 맞는 도서 리스트 출력하기
+-- [프로그래머스] 조건에 맞는 도서 리스트 출력하기
 -- 코드를 입력하세요
 SELECT BOOK_ID, DATE_FORMAT(PUBLISHED_DATE, '%Y-%m-%d') AS PUBLISHED_DATE
 FROM BOOK
@@ -97,7 +97,7 @@ WHERE CATEGORY = '인문' AND YEAR(PUBLISHED_DATE) = 2021
 ORDER BY PUBLISHED_DATE;
 ```
 ```SQL
--- 프로그래머스 12세 이하인 여자 환자 목록 출력하기
+-- [프로그래머스] 12세 이하인 여자 환자 목록 출력하기
 -- 코드를 입력하세요
 SELECT PT_NAME, PT_NO, GEND_CD, AGE, IFNULL(TLNO, 'NONE') AS TLNO
 FROM PATIENT
@@ -105,7 +105,7 @@ WHERE AGE <= 12 AND GEND_CD = 'W'
 ORDER BY AGE DESC, PT_NAME
 ```
 ```SQL
--- 프로그래머스 3월에 태어난 여성 회원 목록 출력하기
+-- [프로그래머스] 3월에 태어난 여성 회원 목록 출력하기
 -- 코드를 입력하세요
 SELECT MEMBER_ID, MEMBER_NAME, GENDER, DATE_FORMAT(DATE_OF_BIRTH, '%Y-%m-%d') AS DATE_OF_BIRTH
 FROM MEMBER_PROFILE
@@ -113,7 +113,7 @@ WHERE MONTH(DATE_OF_BIRTH) = 3 AND TLNO IS NOT NULL AND GENDER = 'W'
 ORDER BY MEMBER_ID
 ```
 ```SQL
--- 프로그래머스 조건에 부합하는 중고거래 댓글 조회하기
+-- [프로그래머스] 조건에 부합하는 중고거래 댓글 조회하기
 -- 코드를 입력하세요
 SELECT A.TITLE, A.BOARD_ID, B.REPLY_ID, B.WRITER_ID, B.CONTENTS, DATE_FORMAT(B.CREATED_DATE, '%Y-%m-%d') AS CREATED_DATE
 FROM USED_GOODS_BOARD AS A
@@ -123,7 +123,7 @@ WHERE SUBSTR(A.CREATED_DATE, 1, 7) = '2022-10'
 ORDER BY B.CREATED_DATE, A.TITLE
 ```
 ```SQL
--- 프로그래머스 서울에 위치한 식당 목록 출력하기
+-- [프로그래머스] 서울에 위치한 식당 목록 출력하기
 -- 코드를 입력하세요
 SELECT A.REST_ID, A.REST_NAME, A.FOOD_TYPE, A.FAVORITES, A.ADDRESS, ROUND(AVG(B.REVIEW_SCORE), 2) AS SCORE
 FROM REST_INFO AS A
@@ -132,4 +132,13 @@ ON A.REST_ID = B.REST_ID
 GROUP BY A.REST_ID
 HAVING A.ADDRESS LIKE '서울%'
 ORDER BY SCORE DESC, A.FAVORITES DESC
+```
+```SQL
+-- [프로그래머스] 재구매가 일어난 상품과 회원 리스트 구하기
+-- 코드를 입력하세요
+SELECT USER_ID, PRODUCT_ID
+FROM ONLINE_SALE
+GROUP BY USER_ID, PRODUCT_ID
+HAVING COUNT(USER_ID) >= 2
+ORDER BY USER_ID, PRODUCT_ID DESC
 ```
