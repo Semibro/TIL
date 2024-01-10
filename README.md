@@ -200,6 +200,22 @@ WHERE 필드명 = (SELECT MAX(필드명)
 # DISTINCT
 SELECT COUNT(DISTINCT(필드명))
 FROM 테이블명
+
+# IFNULL
+SELECT IFNULL(필드명, NULL대신 표시할 값)
+FROM 테이블명
+WHERE 조건
+ORDER BY 정렬조건
+
+
+* IFNULL
+- SELECT IFNULL(컬럼명, 0) FROM 테이블명 : 0으로 치환
+
+* IF
+- SELECT IF(컬럼명 IS NULL, '1', '2') FROM 테이블명 : NULL일 경우 1, 아니면 2를 출력
+
+* NULLIF
+- SELECT NULLIF(1, 1) : (전자 = 후자)의 결과가 false면 전자의 값을 출력하고, true면 NULL을 출력
 ```
 
 ```SQL
@@ -222,4 +238,12 @@ WHERE PRICE = (SELECT MAX(PRICE)
 -- 코드를 입력하세요
 SELECT COUNT(DISTINCT(NAME))
 FROM ANIMAL_INS
+```
+```SQL
+-- [프로그래머스] 경기도에 위치한 식품창고 목록 출력하기
+-- 코드를 입력하세요
+SELECT WAREHOUSE_ID, WAREHOUSE_NAME, ADDRESS, IFNULL(FREEZER_YN, 'N') AS FREEZER_YN
+FROM FOOD_WAREHOUSE
+WHERE ADDRESS LIKE '경기%'
+ORDER BY WAREHOUSE_ID
 ```
