@@ -32,11 +32,20 @@ SELECT AVG(필드명) AS 바뀔필드명 FROM 테이블명 WHERE 조건
 # 반올림
 SELECT ROUND(AVG(필드명), 0) AS 바뀔필드명 FROM 테이블명 WHERE 조건
 
+# 포맷
+SELECT DATE_FORMAT(필드명, 포맷) AS 바뀔필드명
+FROM 테이블명
+WHERE 조건
+ORDER BY 정렬조건
+
 
 * ROUND(값, 자릿수)
 - 자릿수 0 : 1자리 표현
 - 자릿수 N : 소숫점 아래 N자리 표현
 - 자릿수 -N : 반올림하여 10의 N승자리 표현
+
+* TRUNCATE(값, 버릴 자릿수)
+- 숫자를 버릴 자릿수 아래로 버림
 ```
 
 ```SQL
