@@ -72,7 +72,7 @@ ORDER BY 정렬조건
 FROM 테이블 AS A
 WHERE 조건
 UNION
-SELECT 필드명, NULL AS 필드명(필드가 없으면 NULL처리)
+SELECT 필드명, NULL AS 필드명(필드가 없으면 NULL 처리)
 FROM 테이블2 AS B
 WHERE 조건)
 ORDER BY 정렬조건
