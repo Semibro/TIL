@@ -38,6 +38,12 @@ FROM 테이블명
 WHERE 조건
 ORDER BY 정렬조건
 
+# NULL처리
+SELECT IFNULL(필드명, NULL대신 나타낼 값) AS 바뀔필드명
+FROM 테이블명
+WHERE 조건
+ORDER BY 정렬조건 DESC(내림차순), 정렬조건 ASC(오름차순)
+
 
 * ROUND(값, 자릿수)
 - 자릿수 0 : 1자리 표현
@@ -62,4 +68,12 @@ SELECT BOOK_ID, DATE_FORMAT(PUBLISHED_DATE, '%Y-%m-%d') AS PUBLISHED_DATE
 FROM BOOK
 WHERE CATEGORY = '인문' AND YEAR(PUBLISHED_DATE) = 2021
 ORDER BY PUBLISHED_DATE;
+```
+```SQL
+-- 프로그래머스 12세 이하인 여자 환자 목록 출력하기
+-- 코드를 입력하세요
+SELECT PT_NAME, PT_NO, GEND_CD, AGE, IFNULL(TLNO, 'NONE') AS TLNO
+FROM PATIENT
+WHERE AGE <= 12 AND GEND_CD = 'W'
+ORDER BY AGE DESC, PT_NAME
 ```
