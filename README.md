@@ -191,3 +191,11 @@ SELECT COUNT(필드명) AS 바꿀필드명
 FROM 테이블명
 WHERE 조건
 ```
+
+```SQL
+-- [프로그래머스] 조건에 맞는 회원수 구하기
+-- 코드를 입력하세요
+SELECT COUNT(*) AS USERS
+FROM USER_INFO
+WHERE SUBSTR(JOINED, 1, 4) = '2021' AND AGE >= 20 AND AGE <= 29
+```
