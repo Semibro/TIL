@@ -213,6 +213,14 @@ FROM 테이블명
 WHERE 필드명 IS NULL
 ORDER BY 정렬조건
 
+# GROUP BY 활용
+SELECT 필드명
+FROM 테이블명
+WHERE 필드명 IN SELECT 필드명
+                FROM 테이블명
+                GROUP BY 필드명
+ORDER BY 정렬조건
+
 
 * IFNULL
 - SELECT IFNULL(컬럼명, 0) FROM 테이블명 : 0으로 치환
@@ -222,6 +230,18 @@ ORDER BY 정렬조건
 
 * NULLIF
 - SELECT NULLIF(1, 1) : (전자 = 후자)의 결과가 false면 전자의 값을 출력하고, true면 NULL을 출력
+
+* GROUP BY
+- GROUP BY로 묶으면 가장 상단에 있는 데이터를 임의로 가져온다. 즉, GROUP BY로 묶은 그룹 중 첫 번째 값을 가져온다.
+
+* SQL의 쿼리 실행 순서
+- FROM절(+ JOIN) : 테이블 전체를 가져오는 역할, 테이블을 합쳐주는 JOIN도 동순위!
+- WHERE절 : FROM에서 가져온 테이블을 WHERE절을 통해 원하는 조건에 맞는 값만 필터링해주는 역할
+- GROUP BY : 컬럼을 그룹핑, 가장 상단의 데이터를 임의로 가져온다.
+- HAVING절 : GROUP BY를 통해 그룹핑 후 그룹에 사용하는 조건절, WHERE와 HAVING이 둘 다 사용 가능하다면 WHERE를 사용하는 것이 적절
+- SELECT절 : 위의 절들을 실행 후 어떤 컬럼을 출력할지 선택
+- ORDER BY절 : 출력할 컬럼의 순서를 어떠한 방식으로 정렬할지 선택
+- LIMIT : 최종 결과물을 몇 개까지 보여줄지 선택
 ```
 
 ```SQL
@@ -260,4 +280,14 @@ SELECT ANIMAL_ID
 FROM ANIMAL_INS
 WHERE NAME IS NULL
 ORDER BY ANIMAL_ID
+```
+```SQL
+-- [프로그래머스] 즐겨찾기가 가장 많은 식당 정보 출력하기
+-- 코드를 입력하세요
+SELECT FOOD_TYPE, REST_ID, REST_NAME, FAVORITES
+FROM REST_INFO
+WHERE (FOOD_TYPE, FAVORITES) IN (SELECT FOOD_TYPE, MAX(FAVORITES)
+                                FROM REST_INFO
+                                GROUP BY FOOD_TYPE)
+ORDER BY FOOD_TYPE DESC
 ```
