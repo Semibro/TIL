@@ -221,6 +221,16 @@ WHERE 필드명 IN SELECT 필드명
                 GROUP BY 필드명
 ORDER BY 정렬조건
 
+# JOIN + GROUP BY
+SELECT 필드명
+FROM 테이블명1 AS A
+JOIN 테이블명2 AS B
+ON 필드명1 = 필드명2
+WHERE 조건
+GROUP BY 그룹필드
+HAVING 그룹조건
+ORDER BY 정렬조건
+
 
 * IFNULL
 - SELECT IFNULL(컬럼명, 0) FROM 테이블명 : 0으로 치환
@@ -290,4 +300,16 @@ WHERE (FOOD_TYPE, FAVORITES) IN (SELECT FOOD_TYPE, MAX(FAVORITES)
                                 FROM REST_INFO
                                 GROUP BY FOOD_TYPE)
 ORDER BY FOOD_TYPE DESC
+```
+```SQL
+-- [프로그래머스] 조건에 맞는 사용자와 총 거래금액 조회하기
+-- 코드를 입력하세요
+SELECT B.USER_ID, B.NICKNAME, SUM(A.PRICE) AS TOTAL_SALES
+FROM USED_GOODS_BOARD AS A
+JOIN USED_GOODS_USER AS B
+ON A.WRITER_ID = B.USER_ID
+WHERE A.STATUS = 'DONE'
+GROUP BY A.WRITER_ID
+HAVING TOTAL_SALES >= 700000
+ORDER BY TOTAL_SALES
 ```
