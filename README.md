@@ -231,6 +231,16 @@ GROUP BY 그룹필드
 HAVING 그룹조건
 ORDER BY 정렬조건
 
+# CASE
+SELECt 필드명
+    CASE
+        WHEN 조건 THEN 나타낼 값
+        ELSE 다른 값
+    END 필드명
+FROM 테이블명
+WHERE 조건
+GROUP BY 필드명
+ORDER BY 정렬조건
 
 * IFNULL
 - SELECT IFNULL(컬럼명, 0) FROM 테이블명 : 0으로 치환
@@ -312,4 +322,18 @@ WHERE A.STATUS = 'DONE'
 GROUP BY A.WRITER_ID
 HAVING TOTAL_SALES >= 700000
 ORDER BY TOTAL_SALES
+```
+```SQL
+-- [프로그래머스] 자동차 대여 기록에서 대여중 / 대여 가능 여부 구분하기
+-- 코드를 입력하세요
+SELECT CAR_ID,
+    CASE
+        WHEN CAR_ID IN (SELECT CAR_ID
+                       FROM CAR_RENTAL_COMPANY_RENTAL_HISTORY
+                       WHERE '2022-10-16' BETWEEN START_DATE AND END_DATE) THEN '대여중'
+        ELSE '대여 가능'
+    END "AVAILABILITY"
+FROM CAR_RENTAL_COMPANY_RENTAL_HISTORY
+GROUP BY CAR_ID
+ORDER BY CAR_ID DESC
 ```
