@@ -413,3 +413,31 @@ ORDER BY AVERAGE_DURATION DESC, CAR_ID DESC
 |밀리초|millisecond|ms|
 |마이크로초|microsecond|mcs|
 |나노초|nanosecond|ns|
+
+#### SQL 함수 정리
+|함수|사용 예시|출력결과|
+|---|---|---|
+|절대값 ABS|```SELECT ABS(-10) AS 절대값 FROM TABLE```|10|
+|소수점 n자리 버리기 FLOOR|```SELECT FLOOR(34.56789) FROM TABLE```|34|
+|반올림 ROUND|```SELECT ROUND(34.56789)```|35|
+|지정 자리수 자르기 TRUNC|```SELECT TRUNC(34.5678, 2), TRUNC(34.5678, -1), TRUNC(34.5678) FROM TABLE```|34.56  30  34|
+|나머지 리턴 MOD|```SELECT MOD(27, 2) FROM TABLE```|1|
+|대문자 변환 UPPER|```SELECT UPPER('Welcome to MySQL') FROM TABLE```|WELCOME TO MYSQL|
+|소문자 변환 LOWER|```SELECT LOWER('Welcome to MySQL') FROM TABLE```|welcome to mysql|
+|이니셜만 대문자 변환 INITCAP|```SELECT INITCAP('weLcoMe oT mYsQl') FROM TABLE```|Welcome To Mysql|
+|문자열 길이 LENGTH|```SELECT LENGTH('MySQL'), LENGTH('마이에스큐엘') FROM TABLE```|5  6|
+|문자열 일부 추출 SUBSTR|```SELECT SUBSTR('Welcome to MySQL', 4, 4) FROM TABLE```|come|
+|특정문자 위치 리턴 INSTR|```SELECT INSTR('WELCOME TO MYSQL', 'L') FROM TABLE```|3|
+|왼쪽 특정 기호 채우기 LPAD|```SELECT LPAD('MySQL', 10, '$') FROM TABLE```|$$$$$MySQL|
+|오른쪽 특정 기호 채우기 RPAD|```SELECT LPAD('MySQL', 10, '$') FROM TABLE```|MySQL$$$$$|
+|문자열 공백 제거 TRIM|```SELECT TRIM('     MySQL     ') FROM TABLE```|MySQL|
+||||
+||||
+||||
+||||
+||||
+||||
+||||
+||||
+||||
+||||
