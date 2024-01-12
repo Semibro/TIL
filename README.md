@@ -431,10 +431,10 @@ ORDER BY AVERAGE_DURATION DESC, CAR_ID DESC
 |왼쪽 특정 기호 채우기 LPAD|```SELECT LPAD('MySQL', 10, '$') FROM TABLE```|$$$$$MySQL|
 |오른쪽 특정 기호 채우기 RPAD|```SELECT LPAD('MySQL', 10, '$') FROM TABLE```|MySQL$$$$$|
 |문자열 공백 제거 TRIM|```SELECT TRIM('     MySQL     ') FROM TABLE```|MySQL|
-||||
-||||
-||||
-||||
+|시스템 날짜 리턴 SYSDATE|```SELECT SYSDATE FROM TABLE```|24/01/12|
+|날짜 사이 간격 일 수 리턴 MONTHS_BETWEEN|```SELECT ENAME AS '이름', SYSDATE AS '오늘', HIREDATE AS '입사일', MONTHS_BETWEEN(SYSDATE, HIREDATE) AS '근무일' FROM TABLE```|489.456265456|
+|개월 수 구하기 ADD_MONTHS|```SELECT ENAME AS '이름', SYSDATE AS '오늘', HIREDATE AS '입사일', ADD_MONTHS(HIREDATE, 6) AS '입사 6개월 후' FROM TABLE```|23/07/12|
+|지정 월의 마지막 날을 반환 LAST_DAY|```SELECT LAST_DAY(SYSDATE) FROM TABLE```|24/01/31|
 ||||
 ||||
 ||||
