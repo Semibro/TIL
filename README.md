@@ -438,3 +438,29 @@ ORDER BY AVERAGE_DURATION DESC, CAR_ID DESC
 |날짜 형식 변환 출력 TO_CHAR|```SELECT TO_CHAR(SYSDATE, 'YYYY-MM-DD') FROM TABLE```|2024-01-12|
 |숫자 형식 변환 출력 TO_CHAR|```SELECT ENAME AS 이름, SAL AS 연봉, TO_CHAR(SAL, 'L999,999') FROM TABLE```|₩2,677|
 |NULL값 변환 NVL|```SELECT NVL(COMM, 0) FROM TABLE```|NULL이 0으로 변환|
+
+#### 파이썬 지역 개념
+```Python
+# global 범위
+def outer():
+    # outer() 함수 입장에서 local 범위
+    # inner() 함수 입장에서 nonlocal 범위
+    def inner():
+        # inner() 함수 입장에서 local 범위
+```
+```Python
+# [프로그래머스] 타겟 넘버
+def solution(numbers, target):
+    answer = 0
+    def dfs(idx, num):
+        if idx == len(numbers):
+            if num == target:
+                nonlocal answer
+                answer += 1
+            return
+        else:
+            dfs(idx+1, num+numbers[idx])
+            dfs(idx+1, num-numbers[idx])
+    dfs(0, 0)
+    return answer
+```
