@@ -362,3 +362,31 @@ GROUP BY CAR_ID, MONTH(START_DATE)
 HAVING RECORDS > 0
 ORDER BY MONTH, CAR_ID DESC
 ```
+
+<br/>
+
+## 2024. 01. 12
+
+```
+
+[ 데이터베이스 코딩테스트 대비 ]
+
+# DATEDIFF
+- SELECT DATEDIFF('구분자', 'Start_Date', 'End_Date')
+
+```
+
+#### DATEDIFF 구분자
+||구분자|약어|
+|---|---|---|
+|년도|year|yy, yyyy|
+|분기|quarter|qq, q|
+|월|month|mm, m|
+|일|day|dd, d|
+|주|week|wk|
+|시간|hour|m|
+|분|minute|mi, n|
+|초|second|ss, s|
+|밀리초|millisecond|ms|
+|마이크로초|microsecond|mcs|
+|나노초|nanosecond|ns|
