@@ -538,3 +538,14 @@ for i in range(N):
 print(x+1, y+1)
 print(Larm, Rarm, core, Lleg, Rleg)
 ```
+
+<br/>
+
+## 2024. 01. 23
+
+```
+알고리즘
+```
+
+[등수 구하기](https://github.com/Semibro/Algorithm/tree/main/%EB%B0%B1%EC%A4%80/Silver/1205.%E2%80%85%EB%93%B1%EC%88%98%E2%80%85%EA%B5%AC%ED%95%98%EA%B8%B0)
+[크로스 컨트리](https://github.com/Semibro/Algorithm/tree/main/%EB%B0%B1%EC%A4%80/Silver/9017.%E2%80%85%ED%81%AC%EB%A1%9C%EC%8A%A4%E2%80%85%EC%BB%A8%ED%8A%B8%EB%A6%AC)
