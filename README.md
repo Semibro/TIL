@@ -548,4 +548,17 @@ print(Larm, Rarm, core, Lleg, Rleg)
 ```
 
 [등수 구하기](https://github.com/Semibro/Algorithm/tree/main/%EB%B0%B1%EC%A4%80/Silver/1205.%E2%80%85%EB%93%B1%EC%88%98%E2%80%85%EA%B5%AC%ED%95%98%EA%B8%B0)
+
 [크로스 컨트리](https://github.com/Semibro/Algorithm/tree/main/%EB%B0%B1%EC%A4%80/Silver/9017.%E2%80%85%ED%81%AC%EB%A1%9C%EC%8A%A4%E2%80%85%EC%BB%A8%ED%8A%B8%EB%A6%AC)
+
+<br/>
+
+## 2024. 01. 24
+
+```
+알고리즘
+```
+
+[어두운 굴다리](https://github.com/Semibro/Algorithm/tree/738a9edc956e100a4d1631113e95e84c916627af)
+
+[빗물](https://github.com/Semibro/Algorithm/tree/58aa3955f2d9fce780adaa949b44102c8dcdc6f9)
