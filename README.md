@@ -562,3 +562,49 @@ print(Larm, Rarm, core, Lleg, Rleg)
 [어두운 굴다리](https://github.com/Semibro/Algorithm/tree/738a9edc956e100a4d1631113e95e84c916627af)
 
 [빗물](https://github.com/Semibro/Algorithm/tree/58aa3955f2d9fce780adaa949b44102c8dcdc6f9)
+
+<br/>
+
+```
+React를 사용하여 start버튼을 클릭하면 숫자가 1초마다 1씩 오르고 다시 누르면 멈추는 코드 작성
+```
+
+```JavaScript
+import React, { useState } from 'react';
+import './App.css';
+
+function App() {
+  const [timer, setTimer] = useState(0)
+  const [intervalCheck, setIntervalCheck] = useState(null)
+
+  const startFunction = () => {
+    if (intervalCheck) {
+      clearInterval(intervalCheck)
+      setIntervalCheck(null)
+    } else {
+      const id = setInterval(() => {
+        setTimer((prev) => prev + 1)
+      }, 1000)
+
+      setIntervalCheck(id)
+    }
+  }
+
+  return (
+    <div>
+      <h1>Tasks 추가</h1>
+      <div>
+        <div>
+          number: {timer}
+        </div>
+        <div>
+          start: <button onClick={startFunction}>start</button>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export default App;
+
+```
