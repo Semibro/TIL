@@ -693,3 +693,53 @@ axios.put('/url', {
     console.log(err)
   })
 ```
+
+```
+자바스크립트 문법 정리
+```
+
+```JavaScript
+// 자바스크립트 코드는 <script> 태그를 HTML 문서안에 넣어서 사용한다. 보통은 <body> 아래에 사용한다.
+
+// 태그 선택자
+document.getElementsByTagName(태그명)[순서]
+
+// 클래스 선택자
+document.getElementsByClassName(클래스명)[순서]
+
+// 아이디 선택자
+document.getElementById(아이디명)
+
+// 간단한 선택자
+document.querySelector('div')
+document.querySelectorAll('div')[순서]
+
+// 출력문
+window.alert()  // 경고 대화 상자
+document.write()  // 웹 페이지에 가장 먼저 데이터 출력. 테스트나 디버깅 용도
+console.log()  // 콘솔 화면에 데이터 출력
+
+// 변수
+var  // 함수 스코프, 변수명 중복 가능
+let  // 블록 스코프, 변수명 중복 불가능
+const  // 블록 스코프, 변수명 중복 불가능
+
+// 숫자관련 함수
+parseInt()  // string, number를 정수형으로 변환
+parseFloat()  // string, number를 실수형으로 변환
+
+// 문자열관련 함수
+string.indexOf()  // 문자열에서 특정 문자열을 찾는다.
+string.length  // 문자열의 길이를 구한다.
+string.concat()  // 두 개의 문자열을 하나로 만들어준다.
+string.charAt()  // 문자열에서 지정된 위치에 존재하는 문자를 찾아서 반환
+string.substr()  // 문자열에서 특정 부분만 골라낼 때 사용하는 함수
+string.slice()  // 문자열의 특정 부분만 골라낼 때 사용하는 함수
+string.split()  // 문자열을 일정한 구분자로 잘라서 각각의 문자열을 배열로 저장
+string.toUpperCase()  // 알파벳 소문자 문자열을 대문자로 변환
+string.toLowerCase()  // 알파벳 대문자 문자열을 소문자로 변환
+string.trim()  // 문자열 앞 뒤의 모든 공백 제거
+string.replace()  // 문자열 내부에 대한 공백 처리를 할때나 문자열을 다른 값으로 변경할 때 사용
+
+
+```
