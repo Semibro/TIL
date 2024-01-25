@@ -620,5 +620,22 @@ export default App;
 [예산](https://github.com/Semibro/Algorithm/tree/43ead8e573395e6eb7cbf54e76d6789812a51c73/%EB%B0%B1%EC%A4%80/Silver/2512.%E2%80%85%EC%98%88%EC%82%B0)
 
 ```
+[ Axios ]
 
+
+- Node.js와 브라우저를 위한 Promise 기반 HTTP 비동기 통신 라이브러리
+
+- 비동기로 HTTP 통신을 가능하게 해주고, REST API에 데이터를 요청할 때, promise 객체로 return 해주기 때문에 response 데이터를 다루기가 쉽다.
+
+- 설치 : npm install axios
+
+- 모듈 import : import axios from 'axios'
+
+
+[ Promise ]
+
+
+- JS에서 제공하는 비동기를 간편하게 처리할 수 있게 도와주는 객체
+
+- promise는 성공 또는 실패를 할 수 있다.
 ```
