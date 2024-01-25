@@ -648,3 +648,48 @@ axios.delete(url) : DB에 저장된 내용을 삭제하는 목적으로 사용
 axios.post(url, data) : 새로운 데이터를 생성할 때 사용
 axios.put(url, data) : DB에 저장된 내용을 갱신하는데 사용
 ```
+
+#### 예시
+```JavaScript
+axios.get('/url')
+  .then((res) => {
+    console.log(res.data)
+  })
+  .catch((err) => {
+    console.log(err)
+  })
+
+axios.delete('/url', {
+  params: {
+    uuid: 1
+  }
+})
+  .then((res) => {
+    console.log(res.data)
+  })
+  .catch((err) => {
+    console.log(err)
+  })
+
+axios.post('/url', {
+  firstName: 'JunHyung',
+  lastName: 'Kim'
+})
+  .then((res) => {
+    console.log(res.data)
+  })
+  .catch((err) => {
+    console.log(err)
+  })
+
+axios.put('/url', {
+  uuid: 1,
+  name: 'Kim',
+})
+  .then((res) => {
+    console.log(res.data)
+  })
+  .catch((err) => {
+    console.log(err)
+  })
+```
