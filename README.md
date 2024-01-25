@@ -757,3 +757,46 @@ Array.unshift()  // 배열의 첫 번째에 원소 추가
 Array.reverse()  // 배열의 순서를 뒤집는 함수
 Array.sort()  // 배열의 원소를 오름차순으로 정렬
 ```
+
+```
+React를 사용하여 간단한 Todo 만들기
+```
+
+```JavaScript
+import React, { useState } from 'react';
+import './App.css';
+
+function App() {
+  const [todo, setTodo] = useState('')
+  const [todoList, setTodoList] = useState([])
+
+  const todoChange = (e) => {
+    setTodo(e.target.value)
+  }
+
+  const todoSubmit = (e) => {
+    e.preventDefault()  // 폼이 제출될 때, 기본 속성인 새로고침을 방지
+    if (todo === "") {
+      return
+    }
+    setTodoList((array) => [todo, ...array])
+    setTodo("")
+
+  }
+
+  return (
+    <div>
+      <h1>Todo List</h1>
+      <form onSubmit={todoSubmit}>
+        <input type="text" placeholder='입력하세요.' onChange={todoChange} value={todo} />
+        <button>작성하기</button>
+      </form>
+      <ul>
+        {todoList.map((item, index) => <li key={index}>{item}</li>)}
+      </ul>
+    </div>
+  );
+}
+
+export default App;
+```
