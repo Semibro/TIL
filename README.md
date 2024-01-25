@@ -608,3 +608,17 @@ function App() {
 export default App;
 
 ```
+
+<br/>
+
+## 2024. 01. 25
+
+```
+알고리즘
+```
+
+[예산](https://github.com/Semibro/Algorithm/tree/43ead8e573395e6eb7cbf54e76d6789812a51c73/%EB%B0%B1%EC%A4%80/Silver/2512.%E2%80%85%EC%98%88%EC%82%B0)
+
+```
+
+```
