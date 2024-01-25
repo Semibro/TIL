@@ -639,3 +639,12 @@ export default App;
 
 - promise는 성공 또는 실패를 할 수 있다.
 ```
+
+```
+[ Axios HTTP Method ]
+
+axios.get(url) : url이 존재하는 자원에 요청 후, 데이터를 받아오는 방식
+axios.delete(url) : DB에 저장된 내용을 삭제하는 목적으로 사용
+axios.post(url, data) : 새로운 데이터를 생성할 때 사용
+axios.put(url, data) : DB에 저장된 내용을 갱신하는데 사용
+```
