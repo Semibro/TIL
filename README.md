@@ -741,5 +741,19 @@ string.toLowerCase()  // 알파벳 대문자 문자열을 소문자로 변환
 string.trim()  // 문자열 앞 뒤의 모든 공백 제거
 string.replace()  // 문자열 내부에 대한 공백 처리를 할때나 문자열을 다른 값으로 변경할 때 사용
 
-
+// 배열관련 함수
+Array.isArray()  // 배열인지 아닌지 판별하는 함수, 배열일 경우 true 아니면 false
+Array.indexOf()  // 배열에서 특정 데이터를 찾는 함수
+Array.length  // 배열의 길이를 구하는 함수
+Array.toString()  // 배열뿐만 아니라 number 타입도 문자열화 해주는 함수
+Array.join()  // 배열의 모든 데이터를 연결해 하나의 문자열로 변경해주는 함수
+Array.concat()  // 두 개 이상의 배열을 하나의 배열로 만들어주는 함수
+Array.slice()  // 배열에서 특정 부분만 골라내서 반환하는 함수
+Array.splice()  // 배열의 기존 원소를 삭제 또는 교체하거나 새 원소를 추가하여 배열의 내용을 변경하는 함수
+Array.pop()  // 배열의 맨 마지막 원소 하나를 제거
+Array.push()  // 배열의 마지막에 새로운 원소 추가
+Array.shift()  // 배열의 첫 번째 원소 하나를 제거
+Array.unshift()  // 배열의 첫 번째에 원소 추가
+Array.reverse()  // 배열의 순서를 뒤집는 함수
+Array.sort()  // 배열의 원소를 오름차순으로 정렬
 ```
